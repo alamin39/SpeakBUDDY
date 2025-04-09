@@ -1,7 +1,6 @@
 # SpeakBUDDY
-An iOS application.
+An application for iPhone/iPad
 
-Technology:
+### Technology:
 
-Swift
-SwiftUI
+Swift, SwiftUI, Animation
