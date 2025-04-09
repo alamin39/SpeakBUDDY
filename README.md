@@ -1,7 +1,7 @@
 # SpeakBUDDY
 An iOS application.
 
-#Technology:
+Technology:
 
 Swift
 SwiftUI
