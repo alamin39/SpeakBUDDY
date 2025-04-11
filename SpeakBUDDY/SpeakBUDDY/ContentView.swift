@@ -59,7 +59,8 @@ struct ContentView: View {
                 color: foregroundColor,
                 action: {}
             )
-            .padding()
+            .padding(.top, height * 8/844)
+            .padding(.trailing, width * 20.33/390)
         }
     }
 
@@ -116,11 +117,15 @@ struct ContentView: View {
         Button(action: {}) {
             Text("プランに登録する")
                 .font(.custom("HiraginoSans-W5", size: min(width * 16/390, 24)))
-                .frame(maxWidth: .infinity)
-                .padding()
+                .frame(width: width * 350/390, height: height * 56/844)
                 .background(Color(red: 59/255, green: 167/255, blue: 1))
                 .foregroundColor(.white)
-                .cornerRadius(28.66)
+                .clipShape(Capsule())
+                .overlay(
+                    Capsule()
+                        .stroke(.white, lineWidth: 1)
+                )
+                .shadow(color: .black.opacity(0.2), radius: 10, x: 0, y: 2)
         }
         .padding(EdgeInsets(top: height * 25/844, leading: width * 20/390, bottom: height * 54/844, trailing: width * 20/390))
     }

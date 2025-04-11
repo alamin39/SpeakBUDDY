@@ -33,7 +33,7 @@ struct BarChartView: View {
                             )
                             .frame(width: width * 48/390, height: height * barHeights[index]/844)
                             .scaleEffect(y: animateBars ? 1 : 0, anchor: .bottom)
-                            .animation(.easeOut(duration: 1.2), value: animateBars)
+                            .animation(.easeOut(duration: 1.5), value: animateBars)
                         
                         Text(labels[index])
                             .font(.custom("HiraginoSans-W6", size: min(width * 12/390, 18)))
@@ -44,7 +44,7 @@ struct BarChartView: View {
             .frame(height: height * 325/844)
         }
         .onAppear {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                 animateBars = true
             }
         }
